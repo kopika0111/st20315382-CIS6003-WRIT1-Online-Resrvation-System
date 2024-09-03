@@ -1,0 +1,137 @@
+/* manageReservation.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #333;
+}
+
+.header-buttons a {
+    margin-left: 10px;
+}
+
+.back-btn, .add-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover, .add-btn:hover {
+    background-color: #0056b3;
+}
+
+.reservation-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reservation-list th, .reservation-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.reservation-list th {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.reservation-list tr:hover {
+    background-color: #f1f1f1;
+}
+
+.edit-btn, .delete-btn {
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    .reservation-list table, .reservation-list thead, .reservation-list tbody, .reservation-list th, .reservation-list td, .reservation-list tr {
+        display: block;
+    }
+    
+    .reservation-list tr {
+        margin-bottom: 15px;
+    }
+    
+    .reservation-list td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    
+    .reservation-list td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-box:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
